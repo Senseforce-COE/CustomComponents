@@ -1,0 +1,28 @@
+<!--
+  @File Name          : APS_ShowToast_Flow.cmp
+  @Description        : to display a toast message from a flow.
+  @Use Case			  : when screen flow creates record, lwc displays toast message that can be set in setting within flow.
+  @Author             : Armaan Virani
+  Last Modified By   : Armaan Virani
+  Last Modified On   : 5/30/2020
+ 
+        
+      *** This can help you display a toast message with url redirect (reference the APS New Interview Flow)
+      Toast CMP Action URL Formula: LEFT({!$Api.Partner_Server_URL_340},FIND("/services", {!$Api.Partner_Server_URL_340})) and {recordId}    <-the "and" needs to be &
+      Put this formula in a formula variable and reference it in the URL Link sections of the flow component. 
+      Type in the message box {url} where you want the link to show up. 
+	  Add as an action in the flow***
+-->
+
+
+
+<aura:component implements="lightning:availableForFlowActions">
+    <aura:attribute name="type" type="string" default="success" />
+    <aura:attribute name="title" type="string" />
+    <aura:attribute name="message" type="string" />    
+    <aura:attribute name="key" type="string" default="" />
+    <aura:attribute name="mode" type="string" default="dismissable" />
+    <aura:attribute name="duration" type="string" default="10" />
+    <aura:attribute name="urlLink" type="string" />
+    <aura:attribute name="urlLabel" type="string" />
+</aura:component>

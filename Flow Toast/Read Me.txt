@@ -1,0 +1,18 @@
+Read Me 
+
+How to Use Toast Messages in Flow
+
+1. Open Dev Console 
+2. Create New Lightning Component 
+3. Copy the code in .cmp to component, Controller.js in Controller, Helper.js in Helper and .design in design classes.
+4.Save and grab an Action in the flow and find the class you created. 
+
+
+
+Flow Action 
+- Message: all lower case {url} <--- use this where you want the link to be 
+-Title: can be upper case
+-URL Label - you can make this the variable.Name if you want or whatever field/label
+-URL - Create a formula field variable and use this formula 
+
+LEFT({!$Api.Partner_Server_URL_340},FIND("/services", {!$Api.Partner_Server_URL_340})) & {recordId}
