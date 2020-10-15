@@ -1,0 +1,12 @@
+Read Me 
+
+How to Use Confetti Files 
+1. confetti.broswer.min.js - upload this to static resources and name it Confetti (If you don't name it Confetti, remember to change it in the cmp file)
+2. Fireworks.cmp is the lightning componenet 
+3. FireworkController.js is the controller class 
+
+
+If you figure out how to make confetti auto launch without the button's in a flow, please let Armaan know. 
+
+
+Enjoy responsibly
