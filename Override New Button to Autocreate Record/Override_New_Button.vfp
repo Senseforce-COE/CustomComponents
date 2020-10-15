@@ -1,0 +1,9 @@
+<!--
+CreatedBy: Charly Prinsloo
+Created Date: 07/22/2020
+Why VF? Because it is EASY, we have no UI requirements and it works
+-->
+
+<apex:page standardController="APS_Referral__c" extensions="apsReferralNewController" action="{!redirectNew}">
+  <apex:pageMessages ></apex:pageMessages>
+</apex:page>

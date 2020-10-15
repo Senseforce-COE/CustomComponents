@@ -1,0 +1,28 @@
+public with sharing class apsReferralNewController {
+    
+     APS_Referral__c ref; //variable for the Contact object
+     string recTypeID = Schema.SobjectType.APS_Referral__c.getRecordTypeInfosByName().get('Intake & Screening').getRecordTypeId();//get the record type
+     
+//constructor
+
+    public apsReferralNewController(ApexPages.StandardController controller) {
+        ref = (APS_Referral__c)controller.getRecord(); //initialize the standard controller
+    }
+  
+    //method invoked from the Visualforce pages action attribute
+    public PageReference redirectNew() {
+        
+        //add record to database
+        ref.RecordTypeId = recTypeID;
+        //ref.APS_Anonymous__c = TRUE;
+        insert ref;
+        
+        PageReference refPage = new ApexPages.StandardController(ref).view(); //construct the PageReference for the page to which we are redirecting
+        refPage.setRedirect(true); //indicate that the redirect should be performed on the client side
+        return refPage; //send the User on their way
+     
+    }
+
+
+
+}
