@@ -1,0 +1,11 @@
+Read Me 
+
+How to Use Confetti Files 
+This component will be able to be called from a flow. 
+
+1. confetti.broswer.min.js - upload this to static resources and name it Confetti (If you don't name it Confetti, remember to change it in the cmp file)
+
+If you figure out how to make confetti auto launch without the button's in a flow, please let Armaan know. 
+
+
+Enjoy responsibly
